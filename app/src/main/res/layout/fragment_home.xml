@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F7"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".module.main.home.HomeFragment">
+
+    <View
+        android:id="@+id/vCountdownBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownDay"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Sisa Waktu Menuju Pilkada 2018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2C3142"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownDayLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCountdownLabel"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        tools:text="02"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownDayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        android:text="Hari"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownDay"
+        app:layout_constraintEnd_toEndOf="@id/vCountdownDayDivider"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownDay"
+        />
+
+    <View
+        android:id="@+id/vCountdownDayDivider"
+        android:layout_width="1dp"
+        android:layout_height="26dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownDayLabel"
+        app:layout_constraintEnd_toEndOf="@id/tvCountdownHour"
+        app:layout_constraintTop_toTopOf="@id/tvCountdownDay"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownDay"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2C3142"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/vCountdownDayDivider"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownHourLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCountdownLabel"
+        tools:text="23"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownHourLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Jam"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownHour"
+        app:layout_constraintEnd_toStartOf="@id/vCountdownHourDivider"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownHour"
+        />
+
+    <View
+        android:id="@+id/vCountdownHourDivider"
+        android:layout_width="1dp"
+        android:layout_height="26dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownHourLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownMinute"
+        app:layout_constraintTop_toTopOf="@id/tvCountdownHour"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownHour"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2C3142"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/vCountdownHourDivider"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownMinuteLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCountdownLabel"
+        tools:text="37"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownMinuteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Menit"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownMinute"
+        app:layout_constraintEnd_toStartOf="@id/vCountdownMinuteDivider"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownMinute"
+        />
+
+    <View
+        android:id="@+id/vCountdownMinuteDivider"
+        android:layout_width="1dp"
+        android:layout_height="26dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownMinuteLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownSecond"
+        app:layout_constraintTop_toTopOf="@id/tvCountdownMinute"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownMinute"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2C3142"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/vCountdownMinuteDivider"
+        app:layout_constraintEnd_toStartOf="@id/tvCountdownSecondLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCountdownLabel"
+        tools:text="56"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountdownSecondLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Detik"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvCountdownSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountdownSecond"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCandidateTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calon Gubernur Jawa Tengah"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vCountdownBackground"
+        />
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_logo_full"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCandidateTitle"
+        />
+
+    <View
+        android:id="@+id/vCandidateBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="-16dp"
+        app:layout_constraintStart_toStartOf="@id/ivCandidate"
+        app:layout_constraintEnd_toEndOf="@id/ivCandidate"
+        app:layout_constraintTop_toBottomOf="@id/ivCandidate"
+        app:layout_constraintBottom_toBottomOf="@id/btnCandidateDetail"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCandidateLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Pasangan Calon"
+        app:layout_constraintStart_toStartOf="@id/ivCandidate"
+        app:layout_constraintEnd_toEndOf="@id/ivCandidate"
+        app:layout_constraintTop_toBottomOf="@id/ivCandidate"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCandidateName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvCandidateLabel"
+        app:layout_constraintEnd_toEndOf="@id/tvCandidateLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCandidateLabel"
+        tools:text="Ketua - Wakil Ketua"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCandidateDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_rounded_gray"
+        android:text="Lihat Detail"
+        app:layout_constraintStart_toStartOf="@id/tvCandidateLabel"
+        app:layout_constraintEnd_toEndOf="@id/tvCandidateLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvCandidateName"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAdditionalFeature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Fitur Tambahan PilkadaHub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vCandidateBackground"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAdditionalFeature"
+        app:flow_wrapMode="chain"
+        app:flow_maxElementsWrap="2"
+        app:flow_horizontalGap="12dp"
+        app:flow_verticalGap="12dp"
+        app:constraint_referenced_ids="btnCheckResult, btnAgenda, btnProcedure, btnReport"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCheckResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_rounded_gray"
+        android:text="Cek Hasil Pilkada"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:maxWidth="160dp"
+        android:drawableStart="@drawable/ic_menu_result"
+        android:drawablePadding="14dp"
+        android:paddingVertical="24dp"
+        android:paddingHorizontal="22dp"
+        android:gravity="start"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAgenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_rounded_gray"
+        android:text="Agenda Pilkada"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:maxWidth="172dp"
+        android:drawableStart="@drawable/ic_menu_agenda"
+        android:drawablePadding="14dp"
+        android:paddingVertical="24dp"
+        android:paddingHorizontal="22dp"
+        android:gravity="start"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnProcedure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_rounded_gray"
+        android:text="Tata Cara Pilkada 2018"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:maxWidth="160dp"
+        android:drawableStart="@drawable/ic_menu_procedure"
+        android:drawablePadding="14dp"
+        android:paddingVertical="24dp"
+        android:paddingHorizontal="22dp"
+        android:gravity="start"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_rounded_gray"
+        android:text="Laporan Pengaduan"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:maxWidth="160dp"
+        android:drawableStart="@drawable/ic_menu_report"
+        android:drawablePadding="14dp"
+        android:paddingVertical="24dp"
+        android:paddingHorizontal="22dp"
+        android:gravity="start"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
